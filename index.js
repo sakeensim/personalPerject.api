@@ -5,6 +5,7 @@ const handleErrors = require("./middlewares/error")
 
 //Routing
 const authRouter = require("./Routes/auth-routes")
+const userRouter = require("./Routes/user-routes")
 
 const app = express()
 
@@ -17,6 +18,7 @@ app.use(express.json()); // For read json
 
 //Routing
 app.use("/api", authRouter)
+app.use("/api", userRouter )
 
 //Error
 app.use(handleErrors)
